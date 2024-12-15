@@ -1,0 +1,15 @@
+function (cxxspec_add_example)
+  cmake_parse_arguments("" "" "NAME" "SOURCES" ${ARGN})
+  foreach (_source ${_SOURCES})
+    get_filename_component(_name ${_source} NAME_WE)
+    add_executable(${_name})
+    target_sources(${_name} PRIVATE ${_source})
+    add_test(NAME ${_name} COMMAND ${_name})
+  endforeach ()
+endfunction ()
+
+cxxspec_add_example(NAME pass SOURCES pass.cpp)
+cxxspec_add_example(NAME fail_noteq SOURCES fail_noteq.cpp)
+cxxspec_add_example(NAME fail_exn SOURCES fail_exn.cpp)
+
+add_subdirectory(containers)
