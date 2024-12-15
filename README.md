@@ -1,3 +1,5 @@
+![CI/CD](https://github.com/rhanqtl/cxx-spec/actions/workflows/ci/badge.svg)
+
 # CxxSpec: A RSpec-like Test Framework For BDD
 
 ## Overview
