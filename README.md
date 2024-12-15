@@ -44,3 +44,13 @@ int safe_add(int a, int b) {
 ```
 
 Refer to directory `examples` for more examples.
+
+## External Dependencies
+
+External dependencies include:
+
+* `fmtlib` or `{fmt}`
+
+## Use As CMake Build Dependency
+
+TODO
